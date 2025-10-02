@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Love Calculator by vineet.</title>
+    <style>
+      body {
+        background: #ffe0ec;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Arial, sans-serif;
+      }
+      .container {
+        background: #fff;
+        padding: 30px 40px;
+        border-radius: 15px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+      input {
+        padding: 10px;
+        margin: 10px 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 1em;
+      }
+      button {
+        padding: 10px 20px;
+        background: #ff69b4;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        font-size: 1em;
+        cursor: pointer;
+        margin-top: 10px;
+      }
+      button:hover {
+        background: #e75480;
+      }
+      .result {
+        margin-top: 20px;
+        font-size: 1.5em;
+        color: #d72660;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Love Calculator 💖.hehe</h2>
+      <input type="text" id="name1" placeholder="Your Name" />
+      <input type="text" id="name2" placeholder="Partner's Name" />
+      <br />
+      <button onclick="calculateLove()">Calculate</button>
+      <div class="result" id="result"></div>
+    </div>
+    <script>
+      function calculateLove() {
+        const name1 = document.getElementById("name1").value.trim();
+        const name2 = document.getElementById("name2").value.trim();
+        const resultDiv = document.getElementById("result");
+        if (name1 === "" || name2 === "") {
+          resultDiv.textContent = "Please enter both names!";
+          return;
+        }
+        // Generate a random percentage between 50 and 100
+        const percentage = Math.floor(Math.random() * 51) + 50;
+        resultDiv.textContent = `${name1} ❤️ ${name2} = ${percentage}%`;
+      }
+    </script>
+  </body>
+</html>
